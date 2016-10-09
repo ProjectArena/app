@@ -1,0 +1,24 @@
+# I subbed account for User -Glyne
+
+"/" : root
+"/login"
+"/logout"
+"/register"
+
+"/user/:id"
+"/user/create"
+"/user/:id/edit"
+"/user/:id/delete"
+
+"/profile/:id"
+"/profile/<search>"
+"/profile/:id/edit"
+"/profile/:id/add_game"
+"/profile/:id/block"
+"/profile/:id/add_friend"
+
+"/group/:id"
+"/group/create"
+"/group/:id/join"
+"/group/:id/edit"
+"/group/:id/delete"

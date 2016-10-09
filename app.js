@@ -6,10 +6,7 @@ const expressSession = require('express-session');
 const flash = require('connect-flash');
 const methodOverride = require('method-override');
 
-
 const app = express();
-
-app.listen(8000);
 
 app.engine('handlebars', exphbs({
   layoutsDir: './views',
@@ -21,3 +18,5 @@ app.set('views', `${__dirname}/views/`);
 //   res.send("This is the home page");
 // });
 app.use(require('./controllers/'));
+
+app.listen(8000);
