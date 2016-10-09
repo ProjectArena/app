@@ -1,8 +1,8 @@
-var express = requre('express');
+var express = require('express');
 var router = express.Router();
 
 router.get('/', function(req, res) {
-  res.send('This is the home page.');
+  res.send('This is not the home page.');
 })
 
-modules.exports = router;
+module.exports = router;
