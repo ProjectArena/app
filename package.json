@@ -8,7 +8,11 @@
   },
   "scripts": {
     "start": "nodemon app.js",
+<<<<<<< HEAD
     "test": "mocha tests/controllers/"
+=======
+    "test": "mocha test/controllers/"
+>>>>>>> 711b473a2c8a0aedb0f51e5bab611feda30797d0
   },
   "repository": {
     "type": "git",
@@ -38,9 +42,15 @@
     "speakingurl": "9.0.0"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "chai": "^3.5.0",
     "chai-http": "^3.0.0",
     "mocha": "^3.0.2",
+=======
+    "chai": "3.5.0",
+    "chai-http": "^3.0.0",
+    "mocha": "3.0.2",
+>>>>>>> 711b473a2c8a0aedb0f51e5bab611feda30797d0
     "nodemon": "1.10.2"
   }
 }
