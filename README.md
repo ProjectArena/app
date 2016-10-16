@@ -7,6 +7,7 @@ ProjectArena is a web application aspiring to create a social platform for gamer
 * Glyne Gittens <br />
 * Gregory Szymanski <br />
 <br />
+
 ###Resources and Guides: <br />
 [Markdown Language Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links)<br />
 [A Buncha Workshops from NodeSchool](http://nodeschool.io/#workshoppers)<br />
