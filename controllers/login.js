@@ -4,6 +4,7 @@ const router    = express.Router()
 const passport  = require('../middlewares/authentication')
 const User      = require('../models').User
 const Redirect  = require('../middlewares/redirect')
+
 router.get('/login', Redirect.ifLoggedIn('/profile'),function(req, res) {
   res.render('login');
 })
@@ -14,6 +15,5 @@ router.post('/login', Redirect.ifLoggedIn('/profile'), function(req, res, next){
     failureRedirect: '/login'
   })(req, res, next)
 })
-
 
 module.exports = router;

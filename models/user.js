@@ -1,4 +1,7 @@
 'use strict'
+const bcrypt = require('bcrypt')
+const saltRounds = 10;
+
 module.exports = function(sequelize, DataTypes) {
 	var User = sequelize.define('User', {
 
@@ -16,28 +19,15 @@ module.exports = function(sequelize, DataTypes) {
 		}
 	})
 
-	// Sync and create two test users
-	// User.sync().then(function() {
-	// 	return User.create({
-	// 		firstName: 'Donald',
-	// 		lastName: 'Trump',
-	// 		username: 'makemegreatagain',
-	// 		email: 'makemegreatagain@god.com',
-	// 		password: 'chinasux'
-	// 	})
-	// })
-	// User.sync().then(function() {
-	// 	return User.create({
-	// 		firstName: 'Hillary',
-	// 		lastName: 'Clinton',
-	// 		username: 'dontvoteforcrazy',
-	// 		email: 'imthesaneone@usa.org',
-	// 		password: 'iwillruletheworld'
-	// 	})
-	// })
-	User.findAll().then(function(users) {
-		// console.log(users)
-		// Why are we doing this? lol -GG
-	})
-		return User;
+	User.beforeCreate((user) =>
+		new sequelize.Promise((resolve) => {
+			bcrypt.hash(user.password, saltRounds, (err, hash) => {
+				resolve(hash);
+			})
+		}).then((hash) => {
+			user.password = hash;
+		})
+	)
+
+	return User;
 }

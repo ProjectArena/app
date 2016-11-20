@@ -1,13 +1,14 @@
-var express = require('express')
-var router = express.Router()
-var models = require('../models')
+const express   = require('express')
+const router    = express.Router()
+const models    = require('../models')
+const passport  = require('passport')
 const Redirect  = require('../middlewares/redirect')
 
-router.get('/register', Redirect.ifLoggedIn('/profile'),function(req, res){
-  res.render('register_home');
+router.get('/register', Redirect.ifLoggedIn('/profile'), function(req, res){
+  res.render('register');
 })
 
-router.post('/register', Redirect.ifLoggedIn('/profile'), function(req, res){
+router.post('/register', Redirect.ifLoggedIn('/profile'), function(req, res, next){
    models.User.sync().then(function() {
      var user = models.User.build({
        firstName: req.body.firstName,
@@ -17,8 +18,9 @@ router.post('/register', Redirect.ifLoggedIn('/profile'), function(req, res){
        password:  req.body.password
      })
      user.save().then(function() {
-       res.append('Content-Type', 'application/json')
-       res.end(JSON.stringify(user))
+       passport.authenticate('local', {
+         successRedirect: '/profile',
+       })(req, res, next)
      }).catch(function(error) {
        console.log(error)
      })
