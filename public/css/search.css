@@ -38,6 +38,7 @@ div .background {
   font-family: fantasy;
   font-size: 2em;
   color: white;
+  display: hidden;
 }
 
 #title {
