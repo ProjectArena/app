@@ -18,10 +18,10 @@ router.post('/register', Redirect.ifLoggedIn('/profile'), function(req, res, nex
      email:     req.body.email,
      password:  req.body.password
     })
-    
-    user.save().then(function() {
+
+    user.save().then(function(user) {
       passport.authenticate('local', {
-        successRedirect: '/profile',
+        successRedirect: '/profile'
       })(req, res, next)
     }).catch(function(error) {
       console.log(error)
