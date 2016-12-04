@@ -25,9 +25,9 @@ div .background {
   /*height: 60em;*/
 }
 
-/*form {
+form.overwatch, form.starcraft2, form.league {
   display: none;
-}*/
+}
 
 #games {
   padding-top: 5em;

@@ -1,3 +1,5 @@
 node_modules
 browse.VC.db
 .DS_Store
+.vscode
+launch.json
