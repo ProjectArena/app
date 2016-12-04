@@ -3,6 +3,12 @@ html
   head
     link(rel='stylesheet' href='/css/bootstrap.min.css')
     link(rel='stylesheet' href='/css/bootstrap-theme.min.css')
+    link(rel='stylesheet' href='/css/header.css')
     script(type='text/javascript' src='/js/jquery.min.js')
     script(type='text/javascript' src='/js/bootstrap.min.js')
-
+    block styles
+    block scripts
+  body
+    include ../partials/header
+    block content
+    include ../partials/footer
