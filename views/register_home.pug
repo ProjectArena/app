@@ -1,68 +1,68 @@
 extends layout/layout
 block styles
 block content
-    .container
-      form(action='/register', method='POST', role='form')
-        .row
-          - var center = ['col-xs-8', 'col-xs-offset-2', 'text-center']
-          div(class=center)
-            h1 Sign Up Now!
-        hr
-        .row
-          - var gridformat = ['col-xs-4', 'col-xs-offset-2', 'col-md-4', 'col-md-offset-2', 'col-lg-4', 'col-lg-offset-2']
-          div(class=gridformat)
-            - var form_classes = ['form-control', 'input-lg']
-            .form-group
-              input#firstname(class=form_classes, type='text', required='required'
-                name='first_name', placeholder='First Name' tabindex='1')
-          - gridformat = ['col-s-4', 'col-md-4', 'col-lg-4']
-          div(class=gridformat)
-            .form-group
-              input#lastname(class=form_classes, type='text', required='required',
-                name='last_name' placeholder='Last Name' tabindex='2')
+  .container
+    form(action='/register', method='POST', role='form')
+      .row
+        - var center = ['col-xs-8', 'col-xs-offset-2', 'text-center']
+        div(class=center)
+          h1 Sign Up Now!
+      hr
+      .row
+        - var gridformat = ['col-xs-4', 'col-xs-offset-2', 'col-md-4', 'col-md-offset-2', 'col-lg-4', 'col-lg-offset-2']
+        div(class=gridformat)
+          - var form_classes = ['form-control', 'input-lg']
+          .form-group
+            input#firstname(class=form_classes, type='text', required='required'
+              name='first_name', placeholder='First Name' tabindex='1')
+        - gridformat = ['col-s-4', 'col-md-4', 'col-lg-4']
+        div(class=gridformat)
+          .form-group
+            input#lastname(class=form_classes, type='text', required='required',
+              name='last_name' placeholder='Last Name' tabindex='2')
 
-        .row
-          - gridformat = ['col-xs-8', 'col-xs-offset-8', 'col-lg-8', 'col-lg-offset-2']
-          div(class=gridformat)
-            .form-group
-              input#username(class=form_classes, type='text', required='required',
-                name='username', placeholder='Username', tabindex='3')
+      .row
+        - gridformat = ['col-xs-8', 'col-xs-offset-8', 'col-lg-8', 'col-lg-offset-2']
+        div(class=gridformat)
+          .form-group
+            input#username(class=form_classes, type='text', required='required',
+              name='username', placeholder='Username', tabindex='3')
 
-        .row
-          - gridformat = ['col-xs-8', 'col-xs-offset-8', 'col-lg-8', 'col-lg-offset-2']
-          div(class=gridformat)
-            .form-group
-              input#email(class=form_classes, type='text', required='required',
-                name='email', placeholder='E-mail Address', tabindex='4')
+      .row
+        - gridformat = ['col-xs-8', 'col-xs-offset-8', 'col-lg-8', 'col-lg-offset-2']
+        div(class=gridformat)
+          .form-group
+            input#email(class=form_classes, type='text', required='required',
+              name='email', placeholder='E-mail Address', tabindex='4')
 
-        .row
-          div(class=gridformat)
-            .form-group
-              input#password(class=form_classes, type='password', required='required',
-                name='password', placeholder='Password', tabindex='5')
+      .row
+        div(class=gridformat)
+          .form-group
+            input#password(class=form_classes, type='password', required='required',
+              name='password', placeholder='Password', tabindex='5')
 
-        hr
-        .row
-          div(class=gridformat)
-            p
-              span(style='font-size:2.5em; font-weight:bold') Games
-              span(style='font-size:1.5em; color:grey')  (click all that applies)
-            .checkbox
-              label
-                input(type='checkbox' name='overwatch' value='')
-                | Overwatch
-            .checkbox
-              label
-                input(type='checkbox' name='league' value='')
-                | League of Legends
-            .checkbox
-              label
-                input(type='checkbox' name='starcraft' value='')
-                | Starcraft 2
+      hr
+      .row
+        div(class=gridformat)
+          p
+            span(style='font-size:2.5em; font-weight:bold') Games
+            span(style='font-size:1.5em; color:grey')  (click all that applies)
+          .checkbox
+            label
+              input(type='checkbox' name='overwatch' value='')
+              | Overwatch
+          .checkbox
+            label
+              input(type='checkbox' name='league' value='')
+              | League of Legends
+          .checkbox
+            label
+              input(type='checkbox' name='starcraft' value='')
+              | Starcraft 2
 
-        hr
-        div.row
-          - var center_submit = ['col-xs-2', 'col-xs-offset-5', 'col-md-2', 'col-md-offset-5', 'col-lg-2', 'col-lg-offset-5']
-          div(class=center_submit)
-            - var buttons = ['btn', 'btn-primary', 'btn-block', 'btn-lg']
-            input(class=buttons, type='submit', value='Register', tabindex='5')
+      hr
+      div.row
+        - var center_submit = ['col-xs-2', 'col-xs-offset-5', 'col-md-2', 'col-md-offset-5', 'col-lg-2', 'col-lg-offset-5']
+        div(class=center_submit)
+          - var buttons = ['btn', 'btn-primary', 'btn-block', 'btn-lg']
+          input(class=buttons, type='submit', value='Register', tabindex='5')
