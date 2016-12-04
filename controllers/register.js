@@ -12,11 +12,11 @@ router.get('/register', Redirect.ifLoggedIn('/profile'), function(req, res){
 router.post('/register', Redirect.ifLoggedIn('/profile'), function(req, res, next){
   models.User.sync().then(function() {
     var user = models.User.build({
-     first_name: req.body.first_name,
-     last_name:  req.body.last_name,
-     username:  req.body.username,
-     email:     req.body.email,
-     password:  req.body.password
+     first_name:  req.body.first_name,
+     last_name:   req.body.last_name,
+     username:    req.body.username,
+     email:       req.body.email,
+     password:    req.body.password
     })
 
     user.save().then(function(user) {
